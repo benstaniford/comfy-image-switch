@@ -62,11 +62,6 @@ class ImageSwitchNode:
                     selected_image = kwargs[fallback_key]
                     break
         
-        # If still no image found, create a default black image
-        if selected_image is None:
-            # Create a default 512x512 black image
-            selected_image = torch.zeros((1, 512, 512, 3), dtype=torch.float32)
-        
         return (selected_image,)
 
 
